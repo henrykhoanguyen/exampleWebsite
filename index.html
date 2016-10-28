@@ -71,7 +71,6 @@
     <div class="right menu">
     <a class="item" href="#about">About Me</a>
     <a class="item" href="#edu">Education</a>
-    <a class="item" href="#award">Achievement</a>
     <a class="item" href="#extra">Extra...</a>
     </div>
   </div>
@@ -81,7 +80,6 @@
 <div class="ui vertical inverted sidebar menu">
   <a class="item" href="#about">About Me</a>
   <a class="item" href="#edu">Education</a>
-  <a class="item" href="#award">Achievement</a>
   <a class="item" href="#extra">Extra...</a>
 </div>
 
@@ -90,20 +88,20 @@
 
   <section>
     <div class="title-img" style="background: url('images/front_img_1.jpg') 50% 0 repeat fixed; background-size:cover; height: 1080px;">
-    <div class="ui container">
-      <div class="ui large secondary inverted pointing menu">
-        <a class="toc item" style="margin-left: 10em;">
+      <div class="ui container">
+        <div class="ui large secondary inverted pointing menu">
+        <a class="toc item" style="color: black !important; margin-left: 10em;">
           <i class="sidebar icon"></i>
         </a>
         
         <div class="right item">
           <a class="item" href="#about" style="color: #b2b2b2 !important; font-size: 1.25em;">About Me</a>
           <a class="item" href="#edu" style="color: #b2b2b2 !important; font-size: 1.25em;">Education</a>
-          <a class="item" href="#award" style="color: #b2b2b2 !important; font-size: 1.25em;">Achievement</a>
           <a class="item" href="#extra" style="color: #b2b2b2 !important; font-size: 1.25em;">Extra...</a>
         </div>
       </div>
     </div>
+  </div>
   </section>
 
   <div class="ui vertical stripe segment">
@@ -125,18 +123,15 @@
   <div class="column" id="edu"style="padding-left: 20%; padding-right: 20%; margin-top: 0.5%;">
     <h1 style="text-align: center;">Education</h1>
         <div class="ui text container">
-      <h1 class="ui inverted header">
-        <a href="#popup1">        
-          <img onclick="myEdu(0)" src="images/coding.png" alt="Cha Tuyên Úy" class="ui avatar image">
+      <h1 class="ui inverted header" style="text-align: center;"><br>
+        <a href="#title">        
+          <img onclick="myEdu(0)" src="images/coding.png" alt="Languages" class="ui avatar image" style="border-radius: 0; margin-right: 3em;">
         </a>
-        <a href="#popup1">        
-          <img onclick="myEdu(1)" src="images/macbook.png" alt="Sơ Tuyên Úy" class="ui avatar image">
+        <a href="#title">
+          <img onclick="myEdu(1)" src="images/smartphone-5.png" alt="smart phone" class="ui avatar image" style="border-radius: 0; margin-right: 3em;">
         </a>
-        <a href="#popup1">
-          <img onclick="myEdu(2)" src="images/smartphone-5.png" alt="smart phone" class="ui avatar image">
-        </a>
-        <a href="#popup1">
-          <img onclick="myEdu(3)" src="images/photo-camera.png" alt="Đoàn Phó Quảng Trị" class="ui avatar image">
+        <a href="#title">
+          <img onclick="myEdu(2)" src="images/photo-camera.png" alt="photography" class="ui avatar image" style="border-radius: 0;">
         </a>
       </h1>
     </div>
@@ -145,28 +140,28 @@
     <div class="popup" style="margin-top:1.5em; margin-bottom:1.5em;">
       <h2 id="title"></h2>
       <div class="content">
-        <p id ="name"></p>
-        <p id ="info"></p>
-        <img src="images/image.svg" id="pic" style="width: auto;">
+        <p id ="name" style="font-size:1.25em;"></p>
+        <img src="images/image.svg" id="pic" style="max-width: 100%;">
       </div>
     </div>
 
   <script>
     function myEdu(num){
 
-      var eduTitle = [];
+      var eduTitle = ["Language I Know", "App I Developed", "Photography"];
 
-      var eduInfo = [];
+      var eduInfo = ["C++, Java, JavaScript, HTML, CSS", "Interactive Story App<br>Weather App<br>Rock, Paper, Scissors Game", ""];
 
-      var pic = [];
-
-      var extra = [];
+      var pic = ["images/languages.png","images/interactive_story.png","images/beach_1.jpg"];
 
       var image = document.getElementById('pic');
       document.getElementById("title").innerHTML = eduTitle[num];
       document.getElementById("name").innerHTML = eduInfo[num];
-      document.getElementById("info").innerHTML = extra[num];
-      image.src = pic[num];
+      if(pic[num] != null){
+        image.src = pic[num];
+      }else{
+        image.src = "";
+      }
     }
   </script>
   </div>
@@ -177,9 +172,12 @@
       <button class="accordion">My Resume</button>
       <div class="panel" style="overflow: auto;">
         <img src="images/resume.png" style="width:100%;"><br>
-        <p style="text-align:left; font-size:1.5em;">Download <a href="images/resume.png" download>here</a></p>
+        <p style="text-align:left; font-size:1.5em;">Download <a href="images/resume.png" download>here</a></p><br>
       </div>
-
+      <button class="accordion">My Achievement</button>
+      <div class="panel" style="overflow: auto;">
+        <img src="images/where.jpg" style="width:70%;"><br>
+      </div>
       <button class="accordion">My Social Media</button>
       <div class="panel">
         <a href="https://www.facebook.com/TNTT-Vinh-S%C6%A1n-Li%C3%AAm-249522558412572/" target="blank">

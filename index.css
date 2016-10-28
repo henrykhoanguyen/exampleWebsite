@@ -97,7 +97,7 @@
 
 #copyright{
   font-size: .75em;
-  margin-left: 10em;
+  margin-left: 50em;
 }
 
 .back-to-top {
@@ -182,7 +182,7 @@ button.accordion.active, button.accordion:hover {
 }
 
 button.accordion:after {
-    content: '\02795';
+    content: "\02795";
     font-size: 13px;
     color: #777;
     float: right;
@@ -233,7 +233,6 @@ div.panel.show {
 }
 
 .popup .content {
-  max-height: 50%;
   overflow: auto;
   text-align: left;
 }
